@@ -57,6 +57,7 @@ export function Experience() {
                     }
                     role="button"
                     tabIndex={0}
+                    aria-expanded={expandedId === exp.id}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
@@ -90,6 +91,7 @@ export function Experience() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeWidth={1.5}
+                          aria-hidden="true"
                         >
                           <path
                             strokeLinecap="round"

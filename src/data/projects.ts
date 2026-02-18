@@ -74,7 +74,7 @@ export const projects: Project[] = [
     liveUrl: "https://mortgagemate-app.vercel.app",
     passcode: "221801090201",
     challenge:
-      "People preparing for their Canadian mortgage licence exam need interactive practice tools, not more static PDFs. Existing resources are expensive and passive. I wanted to build a free, interactive companion that makes financial math visual and engaging.",
+      "People preparing for their Canadian mortgage licence exam need interactive practice tools, not more static PDFs. Existing resources are expensive and passive. I wanted to build an interactive companion that makes financial math visual and engaging.",
     approach:
       "Architected a modular feature system: Tools Engine (calculators), Study Engine (concepts, flashcards, quizzes), and Gamification Layer (streaks, achievements, mastery tracking). All financial calculations use Canadian semi annual compounding with a pure, tested math library. IndexedDB handles all persistence through an abstracted storage service designed for future Supabase migration. Code splitting via React.lazy ensures sub 120KB initial bundles.",
     features: [
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "Analytics dashboard with exam readiness scoring, category breakdowns, and study activity heatmaps",
     ],
     outcome:
-      "Built the most comprehensive free mortgage education tool available. The architecture demonstrates complex state management, data visualization at scale, and the ability to ship a massive feature set (22 tools, 161 questions, 107 concepts) with clean code organization.",
+      "Built the most comprehensive mortgage education tool of its kind. The architecture demonstrates complex state management, data visualization at scale, and the ability to ship a massive feature set (22 tools, 161 questions, 107 concepts) with clean code organization.",
     metrics: [
       { label: "Financial Calculators", value: "22" },
       { label: "Quiz Questions", value: "161" },
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   },
   {
     slug: "metrohomes",
-    title: "MetroHomes",
+    title: "Metrohomes Design Build",
     subtitle: "Construction Company Website",
     description:
       "A production website for a Toronto design build firm with 35 routes, 35 components, dual mode contact forms with address autocomplete, transactional email, blog CMS, and a 12 color design system. Built solo to replace a legacy Wix site and serve as the company's primary lead generation engine.",
@@ -104,9 +104,9 @@ export const projects: Project[] = [
     featured: true,
     thumbnail: "/images/projects/metrohomes-thumb.png",
     screenshots: [
-      { src: "/images/projects/metrohomes-thumb.png", alt: "MetroHomes homepage hero with Where Vision Takes Form headline" },
-      { src: "/images/projects/metrohomes-services.png", alt: "MetroHomes services page with Design, New Build, and Renovations cards" },
-      { src: "/images/projects/metrohomes-contact.png", alt: "MetroHomes contact form with project type, budget, and timeline fields" },
+      { src: "/images/projects/metrohomes-thumb.png", alt: "Metrohomes Design Build homepage hero with Where Vision Takes Form headline" },
+      { src: "/images/projects/metrohomes-services.png", alt: "Metrohomes Design Build services page with Design, New Build, and Renovations cards" },
+      { src: "/images/projects/metrohomes-contact.png", alt: "Metrohomes Design Build contact form with project type, budget, and timeline fields" },
     ],
     techStack: [
       "Next.js 16",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://metrohomesdesignbuild.ca",
     challenge:
-      "MetroHomes had a broken Wix site with wrong contact info, inconsistent branding, and zero lead attribution. They needed a professional web presence that matched the quality of their construction work. One that could generate leads, showcase projects, and scale with the business.",
+      "Metrohomes Design Build had a broken Wix site with wrong contact info, inconsistent branding, and zero lead attribution. They needed a professional web presence that matched the quality of their construction work. One that could generate leads, showcase projects, and scale with the business.",
     approach:
       "Designed a complete brand aligned design system from scratch: 12 color grayscale palette, Cormorant Garamond + Montserrat typography pairing, and specs for every component. Built 35 routes in Next.js 16 (App Router) including 7 service landing pages, 6 project case studies with photo galleries, a 6 post blog with SEO optimized content, and dual mode contact forms (Design Build and Real Estate) with Google Places address autocomplete and file upload. Implemented Resend transactional email with branded HTML templates, GA4 analytics gated by cookie consent, and a privacy policy. Every page built at both desktop (1440px) and mobile (375px) viewports with full accessibility.",
     features: [

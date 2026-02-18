@@ -50,8 +50,8 @@ export default async function ProjectPage({ params }: Props) {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-6 py-12">
           <a
-            href="/#projects"
-            className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors mb-8"
+            href="/projects"
+            className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors"
           >
             <svg
               className="w-4 h-4"
@@ -59,6 +59,7 @@ export default async function ProjectPage({ params }: Props) {
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={1.5}
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -69,9 +70,11 @@ export default async function ProjectPage({ params }: Props) {
             Back to Projects
           </a>
 
-          <span className="font-mono text-xs uppercase tracking-wider text-accent">
-            {project.category}
-          </span>
+          <div className="mt-8">
+            <span className="font-mono text-xs uppercase tracking-wider text-accent">
+              {project.category}
+            </span>
+          </div>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-light text-text-primary mt-2">
             {project.title}
           </h1>
@@ -96,6 +99,7 @@ export default async function ProjectPage({ params }: Props) {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -110,6 +114,30 @@ export default async function ProjectPage({ params }: Props) {
               </Button>
             )}
           </div>
+
+          {/* Password-protected disclaimer */}
+          {project.passcode && (
+            <div className="mt-4 flex items-start gap-2 text-sm text-text-muted max-w-xl">
+              <svg
+                className="w-4 h-4 mt-0.5 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                />
+              </svg>
+              <p>
+                This app is currently password-protected while licensing discussions are underway. If you&apos;d like a demo, feel free to{" "}
+                <a href="/#contact" className="text-accent hover:underline">reach out</a>.
+              </p>
+            </div>
+          )}
         </section>
 
         {/* Screenshot Gallery */}

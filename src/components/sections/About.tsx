@@ -31,7 +31,7 @@ export function About() {
               </FadeIn>
             ))}
             <FadeIn delay={0.3}>
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col gap-2">
                 <Button
                   href={profile.resumeUrl}
                   variant="secondary"
@@ -44,6 +44,7 @@ export function About() {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     strokeWidth={1.5}
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -52,6 +53,12 @@ export function About() {
                     />
                   </svg>
                 </Button>
+                <a
+                  href="/Gianluca_Di_Vita_Resume_ATS.pdf"
+                  className="text-xs font-mono text-text-muted hover:text-accent transition-colors"
+                >
+                  ATS-friendly version
+                </a>
               </div>
             </FadeIn>
           </div>

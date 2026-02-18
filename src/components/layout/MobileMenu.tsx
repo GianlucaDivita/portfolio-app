@@ -21,6 +21,15 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [open, onClose]);
+
   return (
     <AnimatePresence>
       {open && (
@@ -30,6 +39,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-50 bg-background/95 backdrop-blur-xl"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
         >
           <div className="flex flex-col items-center justify-center h-full">
             {/* Close button */}
@@ -44,6 +56,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={1.5}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"

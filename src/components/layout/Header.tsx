@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/lib/constants";
 import { useScrollSection } from "@/hooks/useScrollSection";
@@ -11,6 +12,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeSection = useScrollSection();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,12 +34,12 @@ export function Header() {
         <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo / Name */}
           <a
-            href="#"
+            href="/"
             className="font-mono text-sm tracking-wider text-text-primary hover:text-accent transition-colors"
-            onClick={(e) => {
+            onClick={isHome ? (e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
+            } : undefined}
           >
             GDV
           </a>
@@ -70,6 +73,7 @@ export function Header() {
               onClick={() => setMobileOpen(true)}
               className="w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:bg-surface-hover transition-colors"
               aria-label="Open menu"
+              aria-expanded={mobileOpen}
             >
               <svg
                 className="w-4 h-4"
@@ -77,6 +81,7 @@ export function Header() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={1.5}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"

@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
     const { name, email, message } = body;
 
@@ -21,22 +23,18 @@ export async function POST(request: Request) {
       );
     }
 
-    // For now, log the message. Replace with Resend or email service later.
-    console.log("Contact form submission:", { name, email, message });
-
-    // TODO: Integrate with Resend API
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'Portfolio <noreply@gianlucadivita.dev>',
-    //   to: 'gianlucajdivita@gmail.com',
-    //   subject: `Portfolio Contact: ${name}`,
-    //   text: `From: ${name} (${email})\n\n${message}`,
-    // });
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: "gianlucajdivita@gmail.com",
+      replyTo: email,
+      subject: `Portfolio Contact: ${name}`,
+      text: `From: ${name} (${email})\n\n${message}`,
+    });
 
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Failed to send message. Please try again." },
       { status: 500 }
     );
   }

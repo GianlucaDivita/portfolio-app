@@ -21,4 +21,9 @@ export const certifications: Certification[] = [
     issuer: "HubSpot Academy",
     category: "marketing",
   },
+  {
+    name: "Mortgage Agent Level 1 Licence",
+    issuer: "FSRA (Ontario)",
+    category: "finance",
+  },
 ];

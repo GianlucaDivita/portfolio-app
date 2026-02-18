@@ -14,7 +14,7 @@ export const profile: Profile = {
   email: "gianlucajdivita@gmail.com",
   phone: "416-500-5412",
   availableForWork: true,
-  resumeUrl: "/Gianluca_Di_Vita_2025_Resume.pdf",
+  resumeUrl: "/Gianluca_Di_Vita_Resume.pdf",
   socials: [
     {
       platform: "github",

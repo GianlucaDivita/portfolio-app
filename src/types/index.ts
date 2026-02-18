@@ -78,7 +78,7 @@ export interface ProjectMetric {
 export interface Certification {
   name: string;
   issuer: string;
-  category: "marketing" | "analytics" | "development";
+  category: "marketing" | "analytics" | "development" | "finance";
 }
 
 export interface Education {

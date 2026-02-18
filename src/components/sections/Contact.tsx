@@ -15,7 +15,8 @@ export function Contact() {
     e.preventDefault();
     setStatus("sending");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     // Honeypot check
     if (formData.get("website")) {
@@ -35,8 +36,8 @@ export function Contact() {
       });
 
       if (res.ok) {
+        form.reset();
         setStatus("sent");
-        e.currentTarget.reset();
       } else {
         setStatus("error");
       }
@@ -97,6 +98,7 @@ export function Contact() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={2}
+                        aria-hidden="true"
                       >
                         <path
                           strokeLinecap="round"

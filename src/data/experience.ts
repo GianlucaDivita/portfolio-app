@@ -30,7 +30,7 @@ export const experience: Experience[] = [
   },
   {
     id: "metrohomes",
-    company: "MetroHomes Group",
+    company: "Metrohomes Design Build",
     role: "Lead Developer & Growth Strategist",
     type: "contract",
     period: { start: "January 2023", end: "Present" },
@@ -61,7 +61,7 @@ export const experience: Experience[] = [
   },
   {
     id: "designedit",
-    company: "DesignEdit",
+    company: "DesignedIT",
     role: "Design Engineer & CRO Lead",
     type: "fulltime",
     period: { start: "August 2020", end: "January 2023" },
