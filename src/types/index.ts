@@ -45,6 +45,11 @@ export type SkillCategory =
   | "ai-automation"
   | "marketing";
 
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -53,6 +58,7 @@ export interface Project {
   category: string;
   featured: boolean;
   thumbnail: string;
+  screenshots: ProjectScreenshot[];
   techStack: string[];
   liveUrl: string;
   repoUrl?: string;

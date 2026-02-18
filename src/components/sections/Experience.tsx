@@ -24,7 +24,7 @@ export function Experience() {
           <SectionHeading
             number="03"
             title="Experience"
-            subtitle="From marketing strategy to full-stack development — each role built on the last."
+            subtitle="From marketing strategy to full stack development, each role built on the last."
           />
         </FadeIn>
 
@@ -79,7 +79,7 @@ export function Experience() {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-text-muted font-mono shrink-0">
                         <span>
-                          {exp.period.start} — {exp.period.end}
+                          {exp.period.start} to {exp.period.end}
                         </span>
                         <svg
                           className={cn(

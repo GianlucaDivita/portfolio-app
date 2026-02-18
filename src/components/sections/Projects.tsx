@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 // Each project gets a subtle style hint reflecting its own design language
@@ -33,7 +34,7 @@ export function Projects() {
           <SectionHeading
             number="04"
             title="Projects"
-            subtitle="Full-stack applications I've designed, built, and shipped to production."
+            subtitle={"Full stack applications I've designed, built, and shipped to\u00A0production."}
           />
         </FadeIn>
 
@@ -68,6 +69,17 @@ export function Projects() {
                   <p className="text-sm text-text-muted mt-1">
                     {project.subtitle}
                   </p>
+
+                  {/* Thumbnail */}
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden mt-4 bg-background">
+                    <Image
+                      src={project.thumbnail}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 440px"
+                    />
+                  </div>
 
                   {/* Description */}
                   <p className="text-text-secondary text-sm mt-4 leading-relaxed line-clamp-3">

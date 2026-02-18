@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 const stats = [
-  { value: "4", label: "Deployed Apps" },
+  { value: "5", label: "Production Apps" },
+  { value: "100+", label: "Routes Shipped" },
+  { value: "70+", label: "Components Built" },
   { value: "5+", label: "Years Experience" },
-  { value: "22", label: "Financial Calculators" },
-  { value: "34", label: "Automated Tests" },
 ];
 
 export function About() {

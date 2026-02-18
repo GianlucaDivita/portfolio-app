@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — Full-Stack Developer & Digital Strategist`,
+    default: `${SITE_NAME} | Full Stack Developer & Digital Strategist`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Full-Stack Developer & Digital Strategist`,
+    title: `${SITE_NAME} | Full Stack Developer & Digital Strategist`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Full-Stack Developer & Digital Strategist`,
+    title: `${SITE_NAME} | Full Stack Developer & Digital Strategist`,
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -48,12 +48,12 @@ export const metadata: Metadata = {
   },
 };
 
-// Hardcoded JSON-LD structured data — no user input, safe to serialize
+// Hardcoded JSON-LD structured data |no user input, safe to serialize
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Gianluca Di Vita",
-  jobTitle: "Full-Stack Developer & Digital Strategist",
+  jobTitle: "Full Stack Developer & Digital Strategist",
   url: SITE_URL,
   sameAs: [
     "https://github.com/GianlucaDivita",
@@ -71,7 +71,7 @@ const jsonLd = {
     "React",
     "Next.js",
     "Node.js",
-    "Full-Stack Development",
+    "Full Stack Development",
     "Digital Marketing",
     "Design Systems",
   ],

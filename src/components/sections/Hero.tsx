@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/Button";
 
 const roles = [
   "Full-Stack Developer",
+  "Product Engineer",
   "Digital Strategist",
-  "Creative Technologist",
 ];
 
 export function Hero() {

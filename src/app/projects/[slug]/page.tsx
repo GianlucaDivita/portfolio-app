@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ProjectCaseStudy } from "./ProjectCaseStudy";
+import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import type { Metadata } from "next";
 
 interface Props {
@@ -21,10 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
 
   return {
-    title: `${project.title} — ${project.subtitle}`,
+    title: `${project.title} | ${project.subtitle}`,
     description: project.description,
     openGraph: {
-      title: `${project.title} — ${project.subtitle}`,
+      title: `${project.title} | ${project.subtitle}`,
       description: project.description,
       type: "article",
     },
@@ -109,11 +110,11 @@ export default async function ProjectPage({ params }: Props) {
               </Button>
             )}
           </div>
-          {project.passcode && (
-            <p className="text-xs text-text-muted mt-3 font-mono">
-              Passcode: {project.passcode}
-            </p>
-          )}
+        </section>
+
+        {/* Screenshot Gallery */}
+        <section className="max-w-5xl mx-auto px-6 pb-8">
+          <ImageCarousel images={project.screenshots} priority />
         </section>
 
         {/* Case Study Content */}
