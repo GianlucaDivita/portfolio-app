@@ -79,7 +79,7 @@ src/
 ├── hooks/
 │   └── useScrollSection.ts     # IntersectionObserver for active nav section highlighting
 ├── assets/
-│   └── fonts/                  # Bundled TTFs for OG + PDF generation (Bricolage Grotesque, DM Sans, JetBrains Mono)
+│   └── fonts/                  # Bundled TTFs for OG image generation (Bricolage Grotesque, DM Sans, JetBrains Mono)
 ├── lib/
 │   ├── utils.ts                # cn() — clsx + tailwind-merge
 │   ├── animations.ts           # Shared Motion variants: fadeInUp, staggerContainer, scaleIn, etc.
@@ -151,6 +151,14 @@ src/
 - [x] Fixed project page: separated "Back to Projects" link from category label, GDV logo now navigates to homepage on subpages
 - [x] Removed "free" from MortgageMate project descriptions (licensing discussions underway)
 - [x] Added password-protected disclaimer on case study pages when `project.passcode` exists (lock icon + contact link)
+- [x] Removed unused PDF pipeline: uninstalled @react-pdf/renderer + docx (74 packages), deleted src/lib/pdf/, src/app/resume/, src/lib/resume-content.ts, scripts/
+- [x] Fixed WCAG color contrast: text-muted dark #4a4a5e → #7a7a90, light #8b8b9e → #6b6b82 (both pass AA 4.5:1)
+- [x] Lighthouse audit: 96 Performance / 100 Accessibility / 100 Best Practices / 100 SEO
+- [x] Created GitHub repo (GianlucaDivita/portfolio-app) and pushed all commits
+
+## TODO
+- [ ] Resend domain verification (sandbox mode: only delivers to account owner, need verified domain for submitter confirmations)
+- [ ] Add dev certifications once completed (freeCodeCamp, AWS Cloud Practitioner, etc.)
 
 ## Commands
 ```bash
