@@ -37,8 +37,6 @@ src/
 │   ├── opengraph-image.tsx     # Dynamic OG image: dark navy bg, mint accent, name/title/location
 │   ├── twitter-image.tsx       # Re-exports root OG image for Twitter cards
 │   ├── api/contact/route.ts    # Contact form POST handler (Resend email, sandbox sender, replyTo for direct replies)
-│   ├── resume/
-│   │   └── route.tsx           # Dynamic PDF generation: /resume (designed) and /resume?variant=ats (ATS-friendly)
 │   └── projects/
 │       ├── page.tsx            # /projects gallery page with category filtering, generateMetadata
 │       ├── ProjectsGallery.tsx # Client component: category filter pills, AnimatePresence grid transitions
@@ -86,12 +84,6 @@ src/
 │   ├── utils.ts                # cn() — clsx + tailwind-merge
 │   ├── animations.ts           # Shared Motion variants: fadeInUp, staggerContainer, scaleIn, etc.
 │   ├── og-fonts.ts             # Loads local TTF fonts for next/og ImageResponse (readFile, no network)
-│   ├── resume-content.ts       # Content curation layer: transforms data files into resume-ready structures
-│   ├── pdf/
-│   │   ├── register-fonts.ts   # Font.register() for @react-pdf/renderer (Bricolage, DM Sans, JetBrains)
-│   │   ├── styles.ts           # Shared PDF constants (colors, fonts, spacing)
-│   │   ├── DesignedResume.tsx   # 1-page designed PDF: teal accent, custom fonts, modern layout
-│   │   └── ATSResume.tsx        # 2-page ATS PDF: Helvetica, single-column, no colors
 │   └── constants.ts            # SITE_URL, NAV_ITEMS, SECTION_IDS
 └── types/
     └── index.ts                # All shared interfaces: Profile, Experience, Skill, Project, etc.
