@@ -34,12 +34,9 @@ export const skills: Skill[] = [
   { name: "Recharts", category: "frameworks", featured: true },
   { name: "Framer Motion", category: "frameworks", featured: false },
   { name: "Vite", category: "frameworks", featured: false },
-  { name: "react-hook-form", category: "frameworks", featured: false },
   { name: "Zod", category: "frameworks", featured: false },
   { name: "React Router", category: "frameworks", featured: false },
-  { name: "date-fns", category: "frameworks", featured: false },
   { name: "idb", category: "frameworks", featured: false },
-  { name: "next-themes", category: "frameworks", featured: false },
 
   // Infrastructure & DevOps
   { name: "Supabase", category: "infrastructure", featured: true },
@@ -79,7 +76,6 @@ export const skills: Skill[] = [
 
   // AI & Automation
   { name: "LLM APIs (GPT-4, Claude)", category: "ai-automation", featured: true },
-  { name: "Prompt Engineering", category: "ai-automation", featured: true },
   { name: "Claude Code", category: "ai-automation", featured: false },
   { name: "Cursor", category: "ai-automation", featured: false },
   { name: "GitHub Copilot", category: "ai-automation", featured: false },
